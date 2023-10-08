@@ -26,8 +26,8 @@ type Rider struct {
 
 
 	//FK export
-	Deliveries []Delivery `gorm:"foreignKey:RiderID"`
+	// Deliveries []Delivery `gorm:"foreignKey:RiderID"`
 
-	Salarys []Salary `gorm:"foreignKey:RiderID"`
+	// Salarys []Salary `gorm:"foreignKey:RiderID"`
 
 }

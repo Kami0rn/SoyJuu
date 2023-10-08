@@ -29,11 +29,11 @@ type Customer struct {
 	Gender string
 
 	//FK export
-	Orders []Order `gorm:"foreignKey:CustomerID"`
+	// Orders []Order `gorm:"foreignKey:CustomerID"`
 
-	Deliveries []Delivery `gorm:"foreignKey:CustomerID"`
+	// Deliveries []Delivery `gorm:"foreignKey:CustomerID"`
 
-	Payments []Payment `gorm:"foreignKey:CustomerID"`
+	// Payments []Payment `gorm:"foreignKey:CustomerID"`
 
 }
 
