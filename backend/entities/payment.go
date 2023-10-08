@@ -19,18 +19,23 @@ type Payment struct {
 	//FK
 
 	OrderID *uint 
+	Order Order `gorm:"foreignKey:OrderID"`
 
 	CustomerID *uint 
+	Customer Customer `gorm:"foreignKey:CusromerID"`
 
 
 	//FK export
-	Orders []Order `gorm:"foreignKey:PaymentID"`
+
 
 	Wallets []Wallet `gorm:"foreignKey:PaymentID"`
 
 	PayAtDeliveries []PayAtDelivery `gorm:"foreignKey:PaymentID"`
 
 	Banks []Bank `gorm:"foreignKey:PaymentID"`
+
+	Cards []Card `gorm:"foreignKey:PaymentID"`
+	
 
 
 }
@@ -86,6 +91,10 @@ type Card struct {
 	AuditNumber string `gorm:"not null"`
 
 	CardType string `gorm:"not null"`
+
+	//FK
+	PaymentID *uint
+	Payment []Payment `gorm:"foreignKey:PaymentID"`
 
 }
 

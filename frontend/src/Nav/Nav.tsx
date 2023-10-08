@@ -2,9 +2,7 @@ import React from 'react'
 import styles from './Nav.module.css'
 import { Link } from "react-router-dom";
 import { useState } from 'react'
-import walletIcon from './assets/walletIcon.png'; // Import the image
-import Vector from './assets/Vector.png'; // Import the image
-import burger from './assets/burger.png'; // Import the image
+
 
 function Nav() {
     // const [ fix,setFix ] = useState(false)
@@ -19,21 +17,21 @@ function Nav() {
   return (
     <nav id='navbar'>
         <div >
-          <Link to='/home' id={styles.burger} >
-            <img  src={burger} alt="" />
+          <Link to='/' id={styles.burger} >
+            <img  src="/NavImage/burger.png" alt="" />
           </Link>
         </div>
       
         <div id={styles.walletNprofile}>
             <div id={styles.wallet}>
-                <Link to='/wallet' id={styles.wallbox} >
+                <Link to='/' id={styles.wallbox} >
                     <h1 id={styles.box} >$1000</h1>
-                    <img src={walletIcon} id={styles.box} />
+                    <img src="/NavImage/walletIcon.png" id={styles.box} />
                 </Link>
             </div >
             <div id={styles.profile}>
                 <a href='#' >Jenny Wilson</a>
-                <img src={Vector} />
+                <img src="/NavImage/Vector.png" />
             </div>
         </div>
     </nav>
