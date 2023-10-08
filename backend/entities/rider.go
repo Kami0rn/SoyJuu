@@ -16,8 +16,6 @@ type Rider struct {
 
 	RidePassword string
 
-	RideTel int
-
 	RideEmail string `gorm:"unique"`
 
 	CarNum string
