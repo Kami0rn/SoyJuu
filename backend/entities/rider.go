@@ -8,17 +8,21 @@ type Rider struct {
 
 	gorm.Model
 
-	RideFirstName string
+	// RideFirstName string
 
-	RideLastName string
+	// RideLastName string
 
-	RideUsername string `gorm:"unique"`
+	// RideUsername string `gorm:"unique"`
 
-	RidePassword string
+	// RidePassword string
 
-	RideEmail string `gorm:"unique"`
+	// RideTel int
 
-	CarNum string
+	// RideEmail string `gorm:"unique"`
+
+	// DriverLicense int
+
+	// CarNum string
 
 
 	//FK export
