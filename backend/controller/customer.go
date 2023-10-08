@@ -19,14 +19,14 @@ func CreateCustomer(c *gin.Context) {
 
 	// Create a new customer entity with the given customer information.
 	u := entities.Customer{
-		FirstName: customer.FirstName,
-		LastName: customer.LastName,
-		Username: customer.Username,
-		Password: customer.Password,
-		Address: customer.Address,
-		Email: customer.Email,
-		Phone: customer.Phone,
-		Gender: customer.Gender,
+		// FirstName: customer.FirstName,
+		// LastName: customer.LastName,
+		// Username: customer.Username,
+		// Password: customer.Password,
+		// Address: customer.Address,
+		// Email: customer.Email,
+		// Phone: customer.Phone,
+		// Gender: customer.Gender,
 	}
 
 	if err := entities.DB().Create(&u).Error; err != nil {
