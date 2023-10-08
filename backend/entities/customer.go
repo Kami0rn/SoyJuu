@@ -22,11 +22,11 @@ type Customer struct {
 
 	Address string `gorm:"not null"`
 
-	Email string `gorm:"uniqueIndex;check:email LIKE '%.com'"`
+	Email string `gorm:"uniqueIndex"`
 
 	Phone string `gorm:"not null"`
 
-	Gender string `gorm:"not null;check:gender IN ('male', 'female', 'other')"`
+	Gender string `gorm:"not null"`
 
 	//FK export
 	Orders []Order `gorm:"foreignKey:CustomerID"`
