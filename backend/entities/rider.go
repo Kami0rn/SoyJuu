@@ -18,9 +18,7 @@ type Rider struct {
 
 	RideTel int
 
-	RideEmail string `gorm:"uniqueIndex"`
-
-	DriverLicense int
+	RideEmail string `gorm:"unique"`
 
 	CarNum string
 
