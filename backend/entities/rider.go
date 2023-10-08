@@ -8,21 +8,21 @@ type Rider struct {
 
 	gorm.Model
 
-	RideFirstName string `gorm:"not null"`
+	RideFirstName string
 
-	RideLastName string `gorm:"not null"`
+	RideLastName string
 
-	RideUsername string `gorm:"unique;not null"`
+	RideUsername string `gorm:"unique"`
 
-	RidePassword string `gorm:"not null"`
+	RidePassword string
 
-	RideTel int `gorm:"not null"`
+	RideTel int
 
-	RideEmail string `gorm:"uniqueIndex;check:email LIKE '%.com'"`
+	RideEmail string `gorm:"uniqueIndex"`
 
-	DriverLicense int `gorm:"not null"`
+	DriverLicense int
 
-	CarNum string `gorm:"not null"`
+	CarNum string
 
 
 	//FK export

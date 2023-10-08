@@ -12,21 +12,21 @@ type Customer struct {
 
 	gorm.Model
 
-	FirstName string `gorm:"not null"`
+	FirstName string
 
-	LastName string `gorm:"not null"`
+	LastName string
 
 	Username string `gorm:"uniqueIndex"`
 
-	Password string `gorm:"not null"`
+	Password string
 
-	Address string `gorm:"not null"`
+	Address string
 
 	Email string `gorm:"uniqueIndex"`
 
-	Phone string `gorm:"not null"`
+	Phone string
 
-	Gender string `gorm:"not null"`
+	Gender string
 
 	//FK export
 	Orders []Order `gorm:"foreignKey:CustomerID"`

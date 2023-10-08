@@ -8,7 +8,7 @@ type Wallet struct {
 
 	gorm.Model
 
-	Remain float64 `gorm:"not null"`
+	Remain float64 
 
 	//FK
 

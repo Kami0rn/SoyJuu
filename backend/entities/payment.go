@@ -10,9 +10,9 @@ type Payment struct {
 
 	gorm.Model
 
-	IsPaid bool `gorm:"not null"`
+	IsPaid bool 
 
-	Method string `gorm:"not null"`
+	Method string 
 
 	CreatedAt time.Time `gorm:"autoCreateTime:true"`
 

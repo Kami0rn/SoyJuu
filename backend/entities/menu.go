@@ -8,7 +8,7 @@ type Menu struct {
 
 	gorm.Model
 
-	Title string `gorm:"not null"`
+	Title string 
 
 	Description string 
 	//FK export
