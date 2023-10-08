@@ -36,8 +36,5 @@ func SetupDatabase() {
 	db = database
 }
 
-// Call the SetupDatabase function to create the database and migrate the tables
-func init() {
-	SetupDatabase()
-}
+
 
