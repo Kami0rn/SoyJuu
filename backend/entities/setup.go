@@ -19,7 +19,7 @@ func SetupDatabase() {
 	}
 
 	database.AutoMigrate(
-		// &Customer{},
+		&Customer{},
 		// &Delivery{},
 		// &Food{},
 		// &FoodMenu{},
@@ -27,7 +27,7 @@ func SetupDatabase() {
 		// &Menu{},
 		// &Order{},
 		// &OrderFood{},
-		&Rider{},
+		// &Rider{},
 		// &Payment{},
 		// &Salary{},
 		// &Wallet{},
