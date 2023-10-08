@@ -1,8 +1,8 @@
 package entities
 
 import (
-	"gorm.io/gorm"
 	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
 )
 
 var db *gorm.DB
@@ -12,7 +12,7 @@ func DB() *gorm.DB {
 }
 
 func SetupDatabase() {
-	database, err := gorm.Open(sqlite.Open("soy-juu.db"), &gorm.Config{})
+	database, err := gorm.Open(sqlite.Open("SoyJuu.db"), &gorm.Config{})
 
 	if err != nil {
 		panic("Failed to connect to database!")
@@ -20,17 +20,24 @@ func SetupDatabase() {
 
 	database.AutoMigrate(
 		&Customer{},
-		&Delivery{}, 
-		&Food{}, 
-		&FoodMenu{}, 
-		&History{}, 
-		&Menu{}, 
-		&Order{}, 
-		&OrderFood{}, 
+		&Delivery{},
+		&Food{},
+		&FoodMenu{},
+		&History{},
+		&Menu{},
+		&Order{},
+		&OrderFood{},
 		&Rider{},
 		&Payment{},
 		&Salary{},
-		&Wallet{})
+		&Wallet{},
+	)
 
 	db = database
 }
+
+// Call the SetupDatabase function to create the database and migrate the tables
+func init() {
+	SetupDatabase()
+}
+
