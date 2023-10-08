@@ -26,7 +26,7 @@ type Customer struct {
 
 	Phone string `gorm:"not null"`
 
-	Gender    string `gorm:"not null;check:gender IN ('male', 'female', 'other')"`
+	Gender string `gorm:"not null;check:gender IN ('male', 'female', 'other')"`
 
 	//FK export
 	Orders []Order `gorm:"foreignKey:CustomerID"`
