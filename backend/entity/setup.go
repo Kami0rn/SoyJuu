@@ -19,7 +19,7 @@ func SetupDatabase() {
 	// Migrate the schema
 	database.AutoMigrate(
 		&User{},
-		&Rider{},
+
 
 	)
 
